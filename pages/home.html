@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOME</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+
+    <h1 id="start" >ముహూర్త నిర్ణయం</h1>
+    <form action="H" >
+        <button type="submit" id="home_btn">HOME</button>
+    </form>
+    
+    <form action="options" method="post">
+        {% csrf_token %}
+        <h4 class="Options_header" id="Options_header">Select options</h4>
+        <div class="options" id="Options_1">
+            <select name="options" id=Options>
+                <option value="subha">సర్వకర్మలకు శుభనక్షత్రములు</option>
+                <option value="tarabalam">తారాబలం</option>
+                <option value="traveling_good"> ప్రయాణానికి మంచి నక్షత్రాలు</option>
+                <option value="traveling_bad"> ప్రయాణానికి చెడ్డ నక్షత్రాలు</option>
+                <option value="panchaka"> పంచక రహీతం</option>
+             </select><br>
+            <button type="submit">SUBMIT</button><br>
+        </div>
+        {% if option == "subha" %}
+        <div id="subha">
+            <h1>సర్వకర్మలకు శుభనక్షత్ర ములు</h1>
+            <ol>
+            <li><h2>మఖ</h2></li>
+            <li><h2>మృగశిర</h2></li>
+            <li><h2>హస్త</h2></li>
+            <li><h2>స్వాతి</h2></li>
+            <li><h2>మూల</h2></li>
+            <li><h2>అనూరాధ</h2></li>
+            <li><h2>రేవతి</h2> </li>
+            <li><h2>రోహిణి </h2></li>
+            <li><h2>ఉత్తర </h2></li>
+            <li><h2>ఉత్తరాషాఢ </h2></li>
+            <li><h2>ఉత్తరాభాద్ర</h2> </li>
+            </ol><br>
+        </div>
+    {% elif option == "traveling_good" %}
+        <div id="travel_good">
+            <h1>ప్రయాణానికి మంచి నక్షత్రాలు</h1>
+            <ol>
+            <li><h2>అశ్విని</h2></li>
+            <li><h2>మృగశిర</h2></li>
+            <li><h2>హస్త</h2></li>
+            <li><h2>పుష్యమి</h2></li>
+            <li><h2>పునర్వసు</h2></li>
+            <li><h2>అనూరాధ</h2></li>
+            <li><h2>శ్రవణం</h2></li>
+            <li><h2>మూల</h2></li>
+            <li><h2>ధనిష్ఠ</h2></li>
+            </ol>
+        </div>
+    {% elif option == "traveling_bad" %}
+        <div id="travel_bad">
+            <h1>ప్రయాణానికి చెడ్డ నక్షత్రాలు</h1>
+            <ol>
+            <li><h2>పుబ్బ</h2></li>
+            <li><h2>పూర్వాభాద్ర</h2></li>
+            <li><h2>పూర్వాషాడ</h2></li>
+            <li><h2>మఖ</h2></li>
+            <li><h2>జ్యేష్ఠ</h2></li>
+            <li><h2>భరణి</h2></li>
+            <li><h2>కృతిక</h2></li>
+            <li><h2>విశాఖ</h2></li>
+            <li><h2>ఆరుద్ర</h2></li>
+            <li><h2>చిత్త</h2></li>
+        </ol>
+        </div>
+        {% endif %}
+</body>
+</html>

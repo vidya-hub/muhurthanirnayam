@@ -1,0 +1,100 @@
+{% load static %}
+<html>
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/tarabalam.css' %}">
+</head>
+<body>
+
+</body>
+</html>
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>TARABALAM</title>#}
+{#    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->#}
+{#    <link rel="stylesheet" type="text\css" href="{%static 'css/tarabalam.css' % }">#}
+{#    </head>#}
+
+<body>
+    <h1 id="start">తారాబలం</h1>
+    <form action="H">
+        <button id="home_btn" type="submit">HOME</button>
+    </form>
+    
+    <form action="arthamatic" method="post">
+        {% csrf_token %}
+        <h4 id="Options_header_1",class="today_header">ఈ రోజు నక్షత్రం నమోదు చేయండి</h4>
+        <div id="Options_1" class="today_sel">
+            <select name="today">
+                <option value="అశ్విని">అశ్విని</option>
+                <option value="భరణి">భరణి</option>
+                <option value="కృత్తిక">కృత్తిక</option>
+                <option value="రోహిణి">రోహిణి</option>
+                <option value="మృగశిర">మృగశిర</option>
+                <option value="ఆరుద్ర">ఆరుద్ర</option>
+                <option value="పునర్వసు">పునర్వసు</option>
+                <option value="పుష్యమి">పుష్యమి</option>
+                <option value="ఆశ్లేష">ఆశ్లేష</option>
+                <option value="మఖ">మఖ</option>
+                <option value="పుబ్బ">పుబ్బ</option>
+                <option value="ఉత్తర">ఉత్తర</option>
+                <option value="హస్త">హస్త</option>
+                <option value="చిత్త">చిత్త</option>
+                <option value="స్వాతి">స్వాతి</option>
+                <option value="విశాఖ">విశాఖ</option>
+                <option value="అనూరాధ">అనూరాధ</option>
+                <option value="జ్యేష్ట">జ్యేష్ట</option>
+                <option value="మూల">మూల</option>
+                <option value="పూర్వాషాఢ">పూర్వాషాఢ</option>
+                <option value="ఉత్తరాషాఢ">ఉత్తరాషాఢ</option>
+                <option value="శ్రవణ">శ్రవణ</option>
+                <option value="ధనిష్ఠ">ధనిష్ఠ</option>
+                <option value="శతభిష">శతభిష</option>
+                <option value="పూర్వాభాద్ర">పూర్వాభాద్ర</option>
+                <option value="ఉత్తరాభాద్ర">ఉత్తరాభాద్ర</option>
+                <option value="రేవతి">రేవతి</option>
+            </select><br>
+        </div>
+        <h4 id="Options_header_2" class="yourday_header">మీ నక్షత్రం నమోదు చేయండి</h4>
+        <div id="Options_2" class="yourday_sel">
+            <select name="yourday">
+                <option value="అశ్విని">అశ్విని</option>
+                <option value="భరణి">భరణి</option>
+                <option value="కృత్తిక">కృత్తిక</option>
+                <option value="రోహిణి">రోహిణి</option>
+                <option value="మృగశిర">మృగశిర</option>
+                <option value="ఆరుద్ర">ఆరుద్ర</option>
+                <option value="పునర్వసు">పునర్వసు</option>
+                <option value="పుష్యమి">పుష్యమి</option>
+                <option value="ఆశ్లేష">ఆశ్లేష</option>
+                <option value="మఖ">మఖ</option>
+                <option value="పుబ్బ">పుబ్బ</option>
+                <option value="ఉత్తర">ఉత్తర</option>
+                <option value="హస్త">హస్త</option>
+                <option value="చిత్త">చిత్త</option>
+                <option value="స్వాతి">స్వాతి</option>
+                <option value="విశాఖ">విశాఖ</option>
+                <option value="అనూరాధ">అనూరాధ</option>
+                <option value="జ్యేష్ట">జ్యేష్ట</option>
+                <option value="మూల">మూల</option>
+                <option value="పూర్వాషాఢ">పూర్వాషాఢ</option>
+                <option value="ఉత్తరాషాఢ">ఉత్తరాషాఢ</option>
+                <option value="శ్రవణ">శ్రవణ</option>
+                <option value="ధనిష్ఠ">ధనిష్ఠ</option>
+                <option value="శతభిష">శతభిష</option>
+                <option value="పూర్వాభాద్ర">పూర్వాభాద్ర</option>
+                <option value="ఉత్తరాభాద్ర">ఉత్తరాభాద్ర</option>
+                <option value="రేవతి">రేవతి</option>
+            </select><br>
+        </div>
+        <button id="submit" type="submit">submit</button><br>
+    </form>
+    <h3 id="res">{{ today }} -----{{ yourday }} ------: {{ res }}</h3>
+</body>
+</html>
